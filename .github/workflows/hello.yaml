@@ -1,0 +1,12 @@
+name: Hello World
+on: [push]
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a test
+        run: |
+          echo "Hello, ${{ github.actor }}!"
+          node --version
+          echo "✅ All good!"
